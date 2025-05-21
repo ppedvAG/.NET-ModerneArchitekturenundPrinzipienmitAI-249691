@@ -11,7 +11,7 @@ namespace DesignPatterns.Factory
     {
         public Pizza CreateMargheritaPizza()
         {
-            var pizza = new Magherita();
+            var pizza = new Margherita();
             pizza.Prepare();
             pizza.Bake();
             return pizza;

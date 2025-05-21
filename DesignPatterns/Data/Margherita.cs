@@ -2,9 +2,9 @@
 
 namespace DesignPatterns.Data
 {
-    public class Magherita : Pizza
+    public class Margherita : Pizza
     {
-        public Magherita() : base("Magherita") 
+        public Margherita() : base("Magherita") 
         { 
             Toppings.Add(PizzaToppings.TomatoSauce); 
             Toppings.Add(PizzaToppings.Cheese); 
