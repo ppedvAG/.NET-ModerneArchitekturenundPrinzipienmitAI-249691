@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M003_DesignPatterns", "M003_DesignPatterns", "{BCD707EB-B003-478A-AD13-C83A9C1F450D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{25F68C7F-C7E8-4A04-9547-7EC4CFB05EB2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabDesignPatterns", "LabDesignPatterns\LabDesignPatterns.csproj", "{D0C38611-1A54-452A-9125-C519140CDAF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +24,16 @@ Global
 		{864569F2-68FB-4444-A337-BB01D4F267AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{864569F2-68FB-4444-A337-BB01D4F267AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{864569F2-68FB-4444-A337-BB01D4F267AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C38611-1A54-452A-9125-C519140CDAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C38611-1A54-452A-9125-C519140CDAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C38611-1A54-452A-9125-C519140CDAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C38611-1A54-452A-9125-C519140CDAF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{864569F2-68FB-4444-A337-BB01D4F267AB} = {BCD707EB-B003-478A-AD13-C83A9C1F450D}
+		{D0C38611-1A54-452A-9125-C519140CDAF3} = {BCD707EB-B003-478A-AD13-C83A9C1F450D}
 	EndGlobalSection
 EndGlobal
