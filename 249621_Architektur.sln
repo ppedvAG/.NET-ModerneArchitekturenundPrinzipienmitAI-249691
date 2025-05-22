@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{864569F2-68FB-4444-A337-BB01D4F267AB}"
 EndProject
@@ -23,6 +23,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSamples", "LinqSamples\LinqSamples.csproj", "{2F11D81D-BB40-477D-8B0C-0D18F927CEE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabLinqPersonen", "LabLinqPersonen\LabLinqPersonen.csproj", "{15BD0888-CAF5-42E5-BFC0-34131B7F6F2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M005_EventSourcing", "M005_EventSourcing", "{4D4A8B78-07BC-4D97-9582-295F06277A97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSourcing", "EventSourcing\EventSourcing.csproj", "{52059202-B599-421C-AEB1-32AB9CDACA5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,10 @@ Global
 		{15BD0888-CAF5-42E5-BFC0-34131B7F6F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15BD0888-CAF5-42E5-BFC0-34131B7F6F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15BD0888-CAF5-42E5-BFC0-34131B7F6F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52059202-B599-421C-AEB1-32AB9CDACA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52059202-B599-421C-AEB1-32AB9CDACA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52059202-B599-421C-AEB1-32AB9CDACA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52059202-B599-421C-AEB1-32AB9CDACA5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +68,6 @@ Global
 		{DC45AA52-4352-4443-AB7A-EF576A627B88} = {09776DC0-1478-46B6-B4AC-6109B0B9FE62}
 		{2F11D81D-BB40-477D-8B0C-0D18F927CEE9} = {E884B723-348D-4F63-A711-A928086097CA}
 		{15BD0888-CAF5-42E5-BFC0-34131B7F6F2B} = {E884B723-348D-4F63-A711-A928086097CA}
+		{52059202-B599-421C-AEB1-32AB9CDACA5B} = {4D4A8B78-07BC-4D97-9582-295F06277A97}
 	EndGlobalSection
 EndGlobal
