@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M006_CQRS", "M006_CQRS", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.WebApi", "OrderService.WebApi\OrderService.WebApi.csproj", "{20CB8514-D157-4541-A67A-496F793F5DDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabBankAccount.WebApi", "LabBankAccount.WebApi\LabBankAccount.WebApi.csproj", "{DFE689BA-F79A-4B5E-AB44-45223A85BF93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{20CB8514-D157-4541-A67A-496F793F5DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20CB8514-D157-4541-A67A-496F793F5DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20CB8514-D157-4541-A67A-496F793F5DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE689BA-F79A-4B5E-AB44-45223A85BF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE689BA-F79A-4B5E-AB44-45223A85BF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE689BA-F79A-4B5E-AB44-45223A85BF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE689BA-F79A-4B5E-AB44-45223A85BF93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{52059202-B599-421C-AEB1-32AB9CDACA5B} = {4D4A8B78-07BC-4D97-9582-295F06277A97}
 		{D946CF74-5836-48B4-8B22-A6BAF52441D0} = {4D4A8B78-07BC-4D97-9582-295F06277A97}
 		{20CB8514-D157-4541-A67A-496F793F5DDA} = {E5B69168-0D4B-4DFE-898A-06B1F5724785}
+		{DFE689BA-F79A-4B5E-AB44-45223A85BF93} = {E5B69168-0D4B-4DFE-898A-06B1F5724785}
 	EndGlobalSection
 EndGlobal
