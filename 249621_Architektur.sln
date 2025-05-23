@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryHub.Business.Core", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryHub.UI.WebApi", "LibraryHub.UI.WebApi\LibraryHub.UI.WebApi.csproj", "{71F2320F-1A9F-4857-96DE-A6147C83642D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryHub.DataAccess.Tests", "LibraryHub.DataAccess.Tests\LibraryHub.DataAccess.Tests.csproj", "{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{71F2320F-1A9F-4857-96DE-A6147C83642D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71F2320F-1A9F-4857-96DE-A6147C83642D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71F2320F-1A9F-4857-96DE-A6147C83642D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,5 +128,6 @@ Global
 		{12FA8C92-865A-4964-AE2A-3FE40A803A81} = {50BF25C3-78B1-4557-A49A-D16B9EBDAB59}
 		{7486EABE-BED0-437D-A938-BE83EA422BB6} = {50BF25C3-78B1-4557-A49A-D16B9EBDAB59}
 		{71F2320F-1A9F-4857-96DE-A6147C83642D} = {50BF25C3-78B1-4557-A49A-D16B9EBDAB59}
+		{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE} = {50BF25C3-78B1-4557-A49A-D16B9EBDAB59}
 	EndGlobalSection
 EndGlobal

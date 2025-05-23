@@ -7,26 +7,27 @@ namespace LibraryHub.DataAccess.Data;
 public static class Seed
 {
     // Define constant GUIDs in v4 format
-    private const string User1Id = "f47ac10b-58cc-4372-a567-0e02b2c3d479";
-    private const string User2Id = "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed";
-    private const string User3Id = "68af4068-8e5a-4d7c-bc6e-9da9b0f41f9e";
-    private const string User4Id = "2a35e6f1-4a6d-4e8f-8a9b-cdef01234567";
-    private const string User5Id = "9c8b7a6d-5e4f-4a3b-2c1d-0e9f8a7b6c5d";
+    public const string User1Id = "f47ac10b-58cc-4372-a567-0e02b2c3d479";
+    public const string User2Id = "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed";
+    public const string User3Id = "68af4068-8e5a-4d7c-bc6e-9da9b0f41f9e";
+    public const string User4Id = "2a35e6f1-4a6d-4e8f-8a9b-cdef01234567";
+    public const string User5Id = "9c8b7a6d-5e4f-4a3b-2c1d-0e9f8a7b6c5d";
 
-    private const string Author1Id = "a1b2c3d4-5678-4e8f-8a9b-cdef01234567";
-    private const string Author2Id = "b2c3d4e5-6789-4f9a-8b0c-def012345678";
-    private const string Author3Id = "c3d4e5f6-7890-4a1b-9c2d-ef0123456789";
+    public const string Author1Id = "a1b2c3d4-5678-4e8f-8a9b-cdef01234567";
+    public const string Author2Id = "b2c3d4e5-6789-4f9a-8b0c-def012345678";
+    public const string Author3Id = "c3d4e5f6-7890-4a1b-9c2d-ef0123456789";
 
-    private const string Book1Id = "b1d2e3f4-5678-4a9b-8c0d-ef1234567890";
-    private const string Book2Id = "2d3e4f56-7890-4b1c-9d2e-0f3456789abc";
-    private const string Book3Id = "3e4f5678-90ab-4c2d-9e3f-10456789abc0";
-    private const string Book4Id = "4f567890-abcd-4d3e-8f40-2156789abcde";
-    private const string Book5Id = "567890ab-cdef-4e4f-9051-326789abcdef";
-    private const string Book6Id = "67890abc-def0-4f50-9162-43789abcdef0";
-    private const string Book7Id = "7890abc1-ef01-4061-9273-5489abcdef01";
-    private const string Book8Id = "890abc23-f012-4172-9384-659abcdef012";
-    private const string Book9Id = "90abc345-0123-4283-9495-76abcdef0123";
-    private const string Book10Id = "0abc4567-1234-4394-9506-87bcdef01234";
+    public const string Book1Id = "b1d2e3f4-5678-4a9b-8c0d-ef1234567890";
+    public const string Book2Id = "2d3e4f56-7890-4b1c-9d2e-0f3456789abc";
+    public const string Book3Id = "3e4f5678-90ab-4c2d-9e3f-10456789abc0";
+    public const string Book4Id = "4f567890-abcd-4d3e-8f40-2156789abcde";
+    public const string Book5Id = "567890ab-cdef-4e4f-9051-326789abcdef";
+    public const string Book6Id = "67890abc-def0-4f50-9162-43789abcdef0";
+    public const string Book7Id = "7890abc1-ef01-4061-9273-5489abcdef01";
+    public const string Book8Id = "890abc23-f012-4172-9384-659abcdef012";
+    public const string Book9Id = "90abc345-0123-4283-9495-76abcdef0123";
+    public const string Book10Id = "0abc4567-1234-4394-9506-87bcdef01234";
+    public const string Book1Title = "Harry Potter and the Philosopher's Stone";
 
     public static void SeedData(ModelBuilder modelBuilder)
     {
@@ -45,7 +46,7 @@ public static class Seed
         );
 
         modelBuilder.Entity<Book>().HasData(
-            new Book { Id = Guid.Parse(Book1Id), Title = "Harry Potter and the Philosopher's Stone", ISBN = "9780747532743", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
+            new Book { Id = Guid.Parse(Book1Id), Title = Book1Title, ISBN = "9780747532743", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
             new Book { Id = Guid.Parse(Book2Id), Title = "A Game of Thrones", ISBN = "9780553103540", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
             new Book { Id = Guid.Parse(Book3Id), Title = "The Shining", ISBN = "9780307743657", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
             new Book { Id = Guid.Parse(Book4Id), Title = "Harry Potter and the Chamber of Secrets", ISBN = "9780439064873", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
