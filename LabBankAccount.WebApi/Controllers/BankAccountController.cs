@@ -29,6 +29,7 @@ public class BankAccountController : ControllerBase
         }
     }
 
+    // http://localhost:5063/api/accounts/{accountId}/deposit
     [HttpPost("{accountId:guid}/deposit")]
     public async Task<IActionResult> Deposit(Guid accountId, [FromBody] DepositCommand command)
     {
@@ -46,6 +47,7 @@ public class BankAccountController : ControllerBase
         }
     }
 
+    // http://localhost:5063/api/accounts/{accountId}/withdraw
     [HttpPost("{accountId:guid}/withdraw")]
     public async Task<IActionResult> Withdraw(Guid accountId, [FromBody] WithdrawCommand command)
     {
