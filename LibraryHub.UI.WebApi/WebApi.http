@@ -1,16 +1,9 @@
 @WebApi_HostAddress = http://localhost:5127
-@bookId = 67890abc-def0-4f50-9162-43789abcdef0
 
-### Get all Users
-GET {{WebApi_HostAddress}}/api/users
-Accept: application/json
+### User Endpoints
 
-### Get a specific User by ID
-GET {{WebApi_HostAddress}}/api/users/{userId}
-Accept: application/json
-
-### Create a new User
-POST {{WebApi_HostAddress}}/api/users
+### Register a new user
+POST {{WebApi_HostAddress}}/api/users/register
 Accept: application/json
 Content-Type: application/json
 
@@ -19,30 +12,13 @@ Content-Type: application/json
   "email": "newuser@example.com"
 }
 
-### Update a User
-PUT {{WebApi_HostAddress}}/api/users/{userId}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "id": "{userId}",
-  "name": "Updated User",
-  "email": "updateduser@example.com"
-}
-
-### Delete a User
-DELETE {{WebApi_HostAddress}}/api/users/{userId}
+### Get all users
+GET {{WebApi_HostAddress}}/api/users
 Accept: application/json
 
-### Get all Books
-GET {{WebApi_HostAddress}}/api/books
-Accept: application/json
+### Book Endpoints
 
-### Get a specific Book by ID
-GET {{WebApi_HostAddress}}/api/books/{{bookId}}
-Accept: application/json
-
-### Create a new Book
+### Add a new book
 POST {{WebApi_HostAddress}}/api/books
 Accept: application/json
 Content-Type: application/json
@@ -50,93 +26,41 @@ Content-Type: application/json
 {
   "title": "New Book",
   "isbn": "1234567890",
-  "authorId": "{authorId}",
+  "authorId": "c3d4e5f6-7890-4a1b-9c2d-ef0123456789",
   "category": 0
 }
 
-### Update a Book
-PUT {{WebApi_HostAddress}}/api/books/{bookId}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "id": "{bookId}",
-  "title": "Updated Book",
-  "isbn": "1234567890",
-  "authorId": "{authorId}",
-  "category": 0
-}
-
-### Delete a Book
-DELETE {{WebApi_HostAddress}}/api/books/{bookId}
+### Get all books
+GET {{WebApi_HostAddress}}/api/books
 Accept: application/json
 
-### Get all Authors
-GET {{WebApi_HostAddress}}/api/authors
+### Get books by rating
+GET {{WebApi_HostAddress}}/api/books/rating/5
 Accept: application/json
 
-### Get a specific Author by ID
-GET {{WebApi_HostAddress}}/api/authors/{authorId}
-Accept: application/json
+### Review Endpoints
 
-### Create a new Author
-POST {{WebApi_HostAddress}}/api/authors
-Accept: application/json
-Content-Type: application/json
-
-{
-  "name": "New Author"
-}
-
-### Update an Author
-PUT {{WebApi_HostAddress}}/api/authors/{authorId}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "id": "{authorId}",
-  "name": "Updated Author"
-}
-
-### Delete an Author
-DELETE {{WebApi_HostAddress}}/api/authors/{authorId}
-Accept: application/json
-
-### Get all Reviews
-GET {{WebApi_HostAddress}}/api/reviews
-Accept: application/json
-
-### Get a specific Review by ID
-GET {{WebApi_HostAddress}}/api/reviews/{reviewId}
-Accept: application/json
-
-### Create a new Review
+### Add a new review
 POST {{WebApi_HostAddress}}/api/reviews
 Accept: application/json
 Content-Type: application/json
 
 {
-  "userId": "{userId}",
-  "bookId": "{bookId}",
+  "bookId": "b1d2e3f4-5678-4a9b-8c0d-ef1234567890",
+  "userId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
   "rating": 5,
   "comment": "Great book!",
   "reviewDate": "2023-01-01T00:00:00"
 }
 
-### Update a Review
-PUT {{WebApi_HostAddress}}/api/reviews/{reviewId}
+### Get reviews by date
+GET {{WebApi_HostAddress}}/api/reviews/date/2023-01-01
 Accept: application/json
-Content-Type: application/json
 
-{
-  "id": "{reviewId}",
-  "userId": "{userId}",
-  "bookId": "{bookId}",
-  "rating": 5,
-  "comment": "Updated comment",
-  "reviewDate": "2023-01-01T00:00:00"
-}
+### Get reviews for a specific book
+GET {{WebApi_HostAddress}}/api/reviews/book/b1d2e3f4-5678-4a9b-8c0d-ef1234567890
+Accept: application/json
 
-### Delete a Review
-DELETE {{WebApi_HostAddress}}/api/reviews/{reviewId}
+### Get reviews for a specific user
+GET {{WebApi_HostAddress}}/api/reviews/user/f47ac10b-58cc-4372-a567-0e02b2c3d479
 Accept: application/json

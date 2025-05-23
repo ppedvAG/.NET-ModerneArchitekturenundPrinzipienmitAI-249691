@@ -1,10 +1,9 @@
 ﻿using LibraryHub.Domain.Entities;
 
-namespace LibraryHub.Business.Core.Contracts
+namespace LibraryHub.Business.Core.Contracts;
+
+public interface IUserService
 {
-    public interface IUserService
-    {
-        Task<List<User>> GetAllUsersAsync();
-        Task<User> RegisterUserAsync(User user);
-    }
+    Task<List<User>> GetAllUsersAsync();
+    Task<User> RegisterUserAsync(User user);
 }

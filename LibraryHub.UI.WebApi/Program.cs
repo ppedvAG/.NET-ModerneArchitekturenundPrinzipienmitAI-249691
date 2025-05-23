@@ -1,4 +1,6 @@
 
+using LibraryHub.Business.Core.Contracts;
+using LibraryHub.Business.Core.Services;
 using LibraryHub.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +13,10 @@ namespace LibraryHub.UI.WebApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddTransient<IUserService, UserService>();
+            builder.Services.AddTransient<IBookService, BookService>();
+            builder.Services.AddTransient<IReviewService, ReviewService>();
+
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<LibraryHubDbContext>(options => options.UseSqlServer(connectionString));
 
