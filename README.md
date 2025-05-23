@@ -61,7 +61,9 @@ dotnet new install Clean.Architecture.Solution.Template
 - [ ] Klassendiagramm erstellen mit draw.io
 - [ ] Domänen-modell generieren lassen
 - [ ] Testdatenbank mit Entity Framework
+- [ ] [Überblick Strategien](https://learn.microsoft.com/de-de/ef/core/testing/)
 - [ ] Testdaten generieren lassen
 - [ ] Geschäftslogik implementieren
 - [ ] WebAPI erstellen
+- [ ] WebAPI mit [http-files testen](https://learn.microsoft.com/de-de/aspnet/core/test/http-files)
 - [ ] Weitere Front-Ends erstellen
