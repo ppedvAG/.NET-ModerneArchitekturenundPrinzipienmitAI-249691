@@ -6,8 +6,9 @@
         {
             while (true)
             {
-                Console.WriteLine("Bitte eine Priminput eingeben: ");
-                if (int.TryParse(Console.ReadLine(), out int input))
+                Console.Write("Bitte eine Priminput eingeben: ");
+                var input = Console.ReadLine();
+                try
                 {
                     if (IsPrimenumber(input))
                     {
@@ -17,8 +18,8 @@
                     {
                         Console.WriteLine($"{input} ist leider keine Primzahl.");
                     }
-                } 
-                else
+                }
+                catch (Exception)
                 {
                     Console.WriteLine("Ungueltige Eingabe. Bitte erneut versuchen.");
                 }
@@ -32,10 +33,12 @@
             }
         }
 
-        public static bool IsPrimenumber(int number)
+        public static bool IsPrimenumber(string? input)
         {
-            if (number <= 1)
-                return false;
+            var number = int.Parse(input);
+
+            if (number < 1)
+                throw new ArgumentException("Input must be a positive integer.");
 
             if (number == 2)
                 return true;
@@ -48,7 +51,6 @@
                 if (number % i == 0)
                     return false;
             }
-
             return true;
         }
     }

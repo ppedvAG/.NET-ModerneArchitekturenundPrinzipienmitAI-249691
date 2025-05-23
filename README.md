@@ -57,8 +57,9 @@ dotnet new install Clean.Architecture.Solution.Template
 
 ## M007 | Business Anwendung
 
-- [ ] Eigene Geschäftsanwendung entwerfen
-- [ ] Klassendiagramm erstellen mit draw.io
+- [ ] Idee für eigene Geschäftsanwendung
+- [ ] Prompting mit Le Chat, Perplexity oder ChatGPT etc.
+- [ ] Klassendiagramm erstellen mit [draw.io](https://draw.io/) oder [mermaid.js](https://www.mermaidchart.com/play)
 - [ ] Domänen-modell generieren lassen
 - [ ] Testdatenbank mit Entity Framework
 - [ ] [Überblick Strategien](https://learn.microsoft.com/de-de/ef/core/testing/)

@@ -12,7 +12,7 @@ namespace PrimenumbersTests
             int number = 2;
 
             // Act
-            bool result = Program.IsPrimenumber(number);
+            bool result = Program.IsPrimenumber($"{number}");
 
             // Assert
             Assert.IsTrue(result);
@@ -30,9 +30,7 @@ namespace PrimenumbersTests
         [DataRow(23)]
         [DataRow(97)]
         public void IsPrimenumber_InputIsPrime_ReturnsTrue(int number)
-        {
-            Assert.IsTrue(Program.IsPrimenumber(number));
-        }
+            => Assert.IsTrue(Program.IsPrimenumber($"{number}"));
 
         [TestMethod]
         [DataRow(0)]
@@ -46,8 +44,22 @@ namespace PrimenumbersTests
         [DataRow(100)]
         [DataRow(-7)]
         public void IsPrimenumber_InputIsNotPrime_ReturnsFalse(int number)
-        {
-            Assert.IsFalse(Program.IsPrimenumber(number));
-        }
+            => Assert.IsFalse(Program.IsPrimenumber($"{number}"));
+
+        [TestMethod]
+        public void IsPrimenumber_Null_ThrowsArgumentNullException()
+            => Assert.ThrowsException<ArgumentNullException>(() => Program.IsPrimenumber(null));
+
+        [TestMethod]
+        public void IsPrimenumber_Negative_ThrowsArgumentException()
+            => Assert.ThrowsException<ArgumentException>(() => Program.IsPrimenumber("-1"));
+
+        [TestMethod]
+        public void IsPrimenumber_String_ThrowsFormatException()
+            => Assert.ThrowsException<FormatException>(() => Program.IsPrimenumber("Hello World"));
+
+        [TestMethod]
+        public void IsPrimenumber_String_ThrowsOverflowException()
+            => Assert.ThrowsException<OverflowException>(() => Program.IsPrimenumber(long.MaxValue.ToString()));
     }
 }
