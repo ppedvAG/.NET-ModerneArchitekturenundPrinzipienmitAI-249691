@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primenumbers", "Primenumber
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primenumber.Tests", "Primenumber.Tests\Primenumber.Tests.csproj", "{7E7E954B-22D8-4ED4-9D33-40B0C6356655}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryHub.Business.Core.Tests", "LibraryHub.Business.Core.Tests\LibraryHub.Business.Core.Tests.csproj", "{EC8B5459-8D94-408E-AE0C-0103D7180B43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +126,10 @@ Global
 		{7E7E954B-22D8-4ED4-9D33-40B0C6356655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7E954B-22D8-4ED4-9D33-40B0C6356655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E7E954B-22D8-4ED4-9D33-40B0C6356655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8B5459-8D94-408E-AE0C-0103D7180B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8B5459-8D94-408E-AE0C-0103D7180B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8B5459-8D94-408E-AE0C-0103D7180B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8B5459-8D94-408E-AE0C-0103D7180B43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,5 +151,6 @@ Global
 		{2E6B65C3-FB96-4BDB-8A4D-8207DA51F5BE} = {50BF25C3-78B1-4557-A49A-D16B9EBDAB59}
 		{E7736FA0-0C58-4FE1-999F-120CAE394E6A} = {42835D4E-DAE4-4B42-AC86-AFCD1EA007E5}
 		{7E7E954B-22D8-4ED4-9D33-40B0C6356655} = {42835D4E-DAE4-4B42-AC86-AFCD1EA007E5}
+		{EC8B5459-8D94-408E-AE0C-0103D7180B43} = {50BF25C3-78B1-4557-A49A-D16B9EBDAB59}
 	EndGlobalSection
 EndGlobal

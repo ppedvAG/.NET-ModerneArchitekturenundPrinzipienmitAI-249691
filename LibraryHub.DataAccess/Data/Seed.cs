@@ -29,6 +29,35 @@ public static class Seed
     public const string Book10Id = "0abc4567-1234-4394-9506-87bcdef01234";
     public const string Book1Title = "Harry Potter and the Philosopher's Stone";
 
+    public static List<Book> Books => 
+    [
+        new Book { Id = Guid.Parse(Book1Id), Title = Book1Title, ISBN = "9780747532743", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book2Id), Title = "A Game of Thrones", ISBN = "9780553103540", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book3Id), Title = "The Shining", ISBN = "9780307743657", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book4Id), Title = "Harry Potter and the Chamber of Secrets", ISBN = "9780439064873", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book5Id), Title = "A Clash of Kings", ISBN = "9780553108033", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book6Id), Title = "It", ISBN = "9781501175460", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book7Id), Title = "Harry Potter and the Prisoner of Azkaban", ISBN = "9780439136365", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book8Id), Title = "A Storm of Swords", ISBN = "9780553106633", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book9Id), Title = "The Stand", ISBN = "9780307947307", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
+        new Book { Id = Guid.Parse(Book10Id), Title = "Harry Potter and the Goblet of Fire", ISBN = "9780439139601", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction }
+    ];
+
+    public static List<Review> Reviews => 
+    [
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User1Id), BookId = Guid.Parse(Book1Id), Rating = 5, Comment = "Loved it!", ReviewDate = new DateTime(2023, 1, 1) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User2Id), BookId = Guid.Parse(Book1Id), Rating = 4, Comment = "Great book!", ReviewDate = new DateTime(2023, 1, 2) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User3Id), BookId = Guid.Parse(Book2Id), Rating = 5, Comment = "Amazing!", ReviewDate = new DateTime(2023, 1, 3) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User4Id), BookId = Guid.Parse(Book3Id), Rating = 3, Comment = "It was okay.", ReviewDate = new DateTime(2023, 1, 4) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User5Id), BookId = Guid.Parse(Book4Id), Rating = 4, Comment = "Very good!", ReviewDate = new DateTime(2023, 1, 5) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User1Id), BookId = Guid.Parse(Book5Id), Rating = 5, Comment = "Excellent!", ReviewDate = new DateTime(2023, 1, 6) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User2Id), BookId = Guid.Parse(Book6Id), Rating = 4, Comment = "Really enjoyed it.", ReviewDate = new DateTime(2023, 1, 7) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User3Id), BookId = Guid.Parse(Book7Id), Rating = 5, Comment = "Fantastic!", ReviewDate = new DateTime(2023, 1, 8) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User4Id), BookId = Guid.Parse(Book8Id), Rating = 3, Comment = "Not bad.", ReviewDate = new DateTime(2023, 1, 9) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User5Id), BookId = Guid.Parse(Book9Id), Rating = 4, Comment = "Very interesting!", ReviewDate = new DateTime(2023, 1, 10) },
+        new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User1Id), BookId = Guid.Parse(Book10Id), Rating = 5, Comment = "A must-read!", ReviewDate = new DateTime(2023, 1, 11) }
+    ];
+
     public static void SeedData(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>().HasData(
@@ -45,31 +74,8 @@ public static class Seed
             new Author { Id = Guid.Parse(Author3Id), Name = "Stephen King" }
         );
 
-        modelBuilder.Entity<Book>().HasData(
-            new Book { Id = Guid.Parse(Book1Id), Title = Book1Title, ISBN = "9780747532743", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book2Id), Title = "A Game of Thrones", ISBN = "9780553103540", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book3Id), Title = "The Shining", ISBN = "9780307743657", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book4Id), Title = "Harry Potter and the Chamber of Secrets", ISBN = "9780439064873", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book5Id), Title = "A Clash of Kings", ISBN = "9780553108033", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book6Id), Title = "It", ISBN = "9781501175460", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book7Id), Title = "Harry Potter and the Prisoner of Azkaban", ISBN = "9780439136365", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book8Id), Title = "A Storm of Swords", ISBN = "9780553106633", AuthorId = Guid.Parse(Author2Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book9Id), Title = "The Stand", ISBN = "9780307947307", AuthorId = Guid.Parse(Author3Id), Category = Category.Fiction },
-            new Book { Id = Guid.Parse(Book10Id), Title = "Harry Potter and the Goblet of Fire", ISBN = "9780439139601", AuthorId = Guid.Parse(Author1Id), Category = Category.Fiction }
-        );
+        modelBuilder.Entity<Book>().HasData(Books);
 
-        modelBuilder.Entity<Review>().HasData(
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User1Id), BookId = Guid.Parse(Book1Id), Rating = 5, Comment = "Loved it!", ReviewDate = new DateTime(2023, 1, 1) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User2Id), BookId = Guid.Parse(Book1Id), Rating = 4, Comment = "Great book!", ReviewDate = new DateTime(2023, 1, 2) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User3Id), BookId = Guid.Parse(Book2Id), Rating = 5, Comment = "Amazing!", ReviewDate = new DateTime(2023, 1, 3) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User4Id), BookId = Guid.Parse(Book3Id), Rating = 3, Comment = "It was okay.", ReviewDate = new DateTime(2023, 1, 4) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User5Id), BookId = Guid.Parse(Book4Id), Rating = 4, Comment = "Very good!", ReviewDate = new DateTime(2023, 1, 5) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User1Id), BookId = Guid.Parse(Book5Id), Rating = 5, Comment = "Excellent!", ReviewDate = new DateTime(2023, 1, 6) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User2Id), BookId = Guid.Parse(Book6Id), Rating = 4, Comment = "Really enjoyed it.", ReviewDate = new DateTime(2023, 1, 7) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User3Id), BookId = Guid.Parse(Book7Id), Rating = 5, Comment = "Fantastic!", ReviewDate = new DateTime(2023, 1, 8) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User4Id), BookId = Guid.Parse(Book8Id), Rating = 3, Comment = "Not bad.", ReviewDate = new DateTime(2023, 1, 9) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User5Id), BookId = Guid.Parse(Book9Id), Rating = 4, Comment = "Very interesting!", ReviewDate = new DateTime(2023, 1, 10) },
-            new Review { Id = Guid.NewGuid(), UserId = Guid.Parse(User1Id), BookId = Guid.Parse(Book10Id), Rating = 5, Comment = "A must-read!", ReviewDate = new DateTime(2023, 1, 11) }
-        );
+        modelBuilder.Entity<Review>().HasData(Reviews);
     }
 }
